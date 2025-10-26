@@ -229,3 +229,17 @@ footer {
 .submit-btn:hover {
   background: #4a5a6a;
 }
+/* === Прижатие футера к низу === */
+html, body {
+  height: 100%;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Занимает минимум всю высоту экрана */
+}
+
+.main-content {
+  flex: 1; /* Растягивается, чтобы заполнить свободное пространство */
+}
