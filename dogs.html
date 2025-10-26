@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Наши собаки</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+  <header><h1>Наши собаки</h1></header>
+  <nav>
+    <a href="index.html">Главная</a>
+    <a href="dogs.html">Наши собаки</a>
+    <a href="shopping.html">Покупки для питомцев</a>
+  </nav>
+ <div class="top-paws">
+    <span class="paw">🐾</span>
+    <span class="paw">🐾</span>
+    <span class="paw">🐾</span>
+    <span class="paw">🐾</span>
+  </div>
+  <div class="container">
+
+    <!-- Тимофей -->
+    <div class="slider-container">
+      <h2 class="slider-title">Тимофей</h2>
+      <button class="slider-btn" id="prevTimofey">‹</button>
+      <div class="slides" id="slidesTimofey">
+        <div class="slide"><img src="images/timofey1.jpg" alt="Тимофей 1"></div>
+        <div class="slide"><img src="images/timofey2.jpg" alt="Тимофей 2"></div>
+        <!-- Добавьте больше фото при желании -->
+      </div>
+      <button class="slider-btn" id="nextTimofey">›</button>
+      <p style="text-align:center; margin-top:1rem;">Лабрадор, 4 года. Обожает воду и спать на диване.</p>
+    </div>
+
+    <!-- Рич -->
+    <div class="slider-container">
+      <h2 class="slider-title">Рич</h2>
+      <button class="slider-btn" id="prevRich">‹</button>
+      <div class="slides" id="slidesRich">
+        <div class="slide"><img src="images/rich1.jpg" alt="Рич 1"></div>
+        <div class="slide"><img src="images/rich2.jpg" alt="Рич 2"></div>
+      </div>
+      <button class="slider-btn" id="nextRich">›</button>
+      <p style="text-align:center; margin-top:1rem;">Джек-рассел, 3 года. Вечный двигатель и любитель копать!</p>
+    </div>
+
+    <!-- Белла -->
+    <div class="slider-container">
+      <h2 class="slider-title">Белла</h2>
+      <button class="slider-btn" id="prevBella">‹</button>
+      <div class="slides" id="slidesBella">
+        <div class="slide"><img src="images/bella1.jpg" alt="Белла 1"></div>
+        <div class="slide"><img src="images/bella2.jpg" alt="Белла 2"></div>
+      </div>
+      <button class="slider-btn" id="nextBella">›</button>
+      <p style="text-align:center; margin-top:1rem;">Шпиц, 2 года. Королева дома с пушистой шубкой.</p>
+    </div>
+
+  </div>
+
+  <footer><p>&copy; 2025 Мой собачий мир</p></footer>
+
+  <script>
+    // Универсальная функция для слайдера
+    function initSlider(slidesId, prevId, nextId) {
+      const slides = document.querySelectorAll(`#${slidesId} .slide`);
+      let index = 0;
+
+      function showSlide() {
+        slides.forEach((slide, i) => {
+          slide.style.display = (i === index) ? 'block' : 'none';
+        });
+      }
+
+      document.getElementById(prevId).addEventListener('click', () => {
+        index = (index - 1 + slides.length) % slides.length;
+        showSlide();
+      });
+
+      document.getElementById(nextId).addEventListener('click', () => {
+        index = (index + 1) % slides.length;
+        showSlide();
+      });
+
+      showSlide(); // Показать первый слайд
+    }
+
+    // Инициализация всех слайдеров
+    initSlider('slidesTimofey', 'prevTimofey', 'nextTimofey');
+    initSlider('slidesRich', 'prevRich', 'nextRich');
+    initSlider('slidesBella', 'prevBella', 'nextBella');
+  </script>
+</body>
+</html>
