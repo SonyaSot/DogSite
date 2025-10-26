@@ -143,6 +143,7 @@ footer {
     height: 34px;
     font-size: 1rem;
   }
+}
   /* === Анимированные лапки сверху === */
 .top-paws {
   text-align: center;
@@ -227,5 +228,4 @@ footer {
 
 .submit-btn:hover {
   background: #4a5a6a;
-}
 }
