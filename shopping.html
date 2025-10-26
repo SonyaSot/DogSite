@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Покупки для питомцев</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+  <header><h1>Покупки для Тимофея, Рича и Беллы</h1></header>
+  <nav>
+    <a href="index.html">Главная</a>
+    <a href="dogs.html">Наши собаки</a>
+    <a href="shopping.html">Покупки для питомцев</a>
+  </nav>
+  <div class="top-paws">
+    <span class="paw">🐾</span>
+    <span class="paw">🐾</span>
+    <span class="paw">🐾</span>
+    <span class="paw">🐾</span>
+  </div>
+
+  <div class="container">
+    <div class="shopping-item">
+      <h2>Игрушки</h2>
+      <img src="images/toy1.jpg" alt="Игрушки">
+      <p>Мячи, канаты, пищалки — всё, что нужно для счастья!</p>
+    </div>
+
+    <div class="shopping-item">
+      <h2>Корм и лакомства</h2>
+      <img src="images/food1.jpg" alt="Еда">
+      <p>Премиум-корм, натуральные кости и вкусняшки для дрессировки.</p>
+    </div>
+
+    <div class="shopping-item">
+      <h2>Аксессуары</h2>
+      <img src="images/accessory1.jpg" alt="Аксессуары">
+      <p>Ошейники, поводки, шлейки и даже собачьи пальто!</p>
+    </div>
+
+    <div class="shopping-item">
+      <h2>Уход</h2>
+      <img src="images/care1.jpg" alt="Уход">
+      <p>Шампуни, щётки, когтерезки и средства от блох.</p>
+    </div>
+
+    <!-- Форма обратной связи -->
+    <div class="feedback-form">
+      <h2>Что купить собакам следующим?</h2>
+      <form id="petSuggestionForm">
+        <div class="form-group">
+          <label for="name">Ваше имя</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="dog">Для какой собаки?</label>
+          <select id="dog" name="dog" required>
+            <option value="">— Выберите —</option>
+            <option value="timofey">Тимофей</option>
+            <option value="rich">Рич</option>
+            <option value="bella">Белла</option>
+            <option value="all">Для всех</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="suggestion">Ваше предложение</label>
+          <textarea id="suggestion" name="suggestion" placeholder="Например: новую игрушку-пищалку или куртку на зиму..." required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Отправить идею 🐾</button>
+      </form>
+    </div>
+  </div>
+
+  <footer><p>&copy; 2025 Мой собачий мир</p></footer>
+
+  <script>
+    // Простая обработка отправки
+    document.getElementById('petSuggestionForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Спасибо за ваше предложение! 🐶\nЯ обязательно рассмотрю его для Тимофея, Рича или Беллы!');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
