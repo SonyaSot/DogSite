@@ -69,16 +69,18 @@ body {
 
 .slide {
   display: none;
+  text-align: center;
 }
+
 .slide.active {
   display: block;
-  text-align: center;
 }
 
 .slide img {
   max-width: 100%;
   height: auto;
-  max-height: 350px;
+  max-height: 400px;
+  object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
@@ -90,6 +92,7 @@ footer {
   padding: 1.5rem 0;
   margin-top: auto;
 }
+
 
 .page-wrapper {
   display: flex;
